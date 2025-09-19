@@ -1,1 +1,1 @@
-  This is repository for Digtial media.
+  This is repository for Digtial Media.
