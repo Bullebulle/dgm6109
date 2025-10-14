@@ -1,0 +1,104 @@
+body {
+    font-family:fantasy; /* Change the default font.*/
+}
+
+h1 {
+    /*Add space between the elements you have built.*/
+    margin-bottom: 2rem;
+    /*Shorten the default width of the paragraph element and ensure it is still responsive when the viewport shrinks.*/
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+nav {
+    margin-bottom: 2rem;
+    max-width: 800px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+h2 {
+    margin-bottom: 2rem;
+    max-width: 800px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+p {
+    margin-bottom: 2rem;
+}
+
+h3 {
+    margin-bottom: 2rem;
+    max-width: 800px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+} 
+
+h4 {
+    margin-bottom: 2rem;
+    max-width: 800px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+img {
+    /*It is still responsive when the viewport shrinks.*/
+    max-width: 100%;
+    height: auto;
+    /*Add space between the elements you have built.*/
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+figcaption {
+    font-style: italic; 
+    max-width: 800px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+a {
+    color:aquamarine;
+    transition-property: color;
+    transition-duration: 3s;
+
+}
+
+
+/*Add a different hover and focus state styling to the in-text link.*/
+a:hover, a:focus {
+    text-decoration: underline wavy;
+    color: brown;
+}
+
+/*Add a different hover and focus state styling to the image inside a link.*/
+img:hover, img:focus {
+    border: 20px solid greenyellow;
+}
+.nav-main-item {
+    background-color: blueviolet;
+}
+.nav-sub-item {
+    background-color: darkorange;
+}
+
+p {
+    max-width: 800px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
