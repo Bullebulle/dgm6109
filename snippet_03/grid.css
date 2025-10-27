@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+/*For mobile (320px)*/
+.grid, .toy-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/*For desktop (1024px)*/
+@media (min-width: 64rem) { /*1024px = 64rem reference: https://nekocalc.com/px-to-rem-converter*/
+    .grid {  
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+    .toy-grid { 
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    }
+}
+
+/*For large screens (1920px)*/
+@media (min-width: 120rem) { /* 1920px = 120rem */
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    
+    .toy-grid {
+        grid-template-columns: 1fr 1fr; 
+        gap: 2.5rem;
+    }
+}
