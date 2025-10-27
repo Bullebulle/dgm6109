@@ -1,0 +1,114 @@
+body {
+    font-family:fantasy; /* Change the default font.*/
+    background-image: url(../img/background.jpg); /* background image. reference: https://www.w3schools.com/css/css_background_image.asp*/
+    background-size: contain; 
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, p, nav, label {
+    margin: 0.5rem 3rem; /* Uniform margins: Top and bottom margins are 0.5 rem，Left and right margins are 3 rem*/
+    padding: 0.2rem;     /* Uniform paddings: Top & bottom & Left & right paddings are 0.2rem */
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: aliceblue;
+}
+
+h2 {
+    font-size: 2rem;
+    color: aliceblue;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: aliceblue;
+} 
+
+h4 {
+    font-size: 1rem;;
+    color: aliceblue;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1800px;
+    gap: 0.5rem;
+}
+
+label {
+    color: aliceblue;
+}
+
+p {
+    color: aliceblue;
+    max-width: 1800px;
+    padding: 0.1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 0rem 3rem;
+    padding-left: 3rem;
+    padding-right: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.1rem;
+}
+
+figcaption {
+    font-style: italic; 
+    max-width: 800px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    color: aliceblue;
+
+}
+
+a {
+    color:aquamarine;
+    transition-property: color;
+    transition-duration: 3s;
+
+}
+
+/*Add a different hover and focus state styling to the in-text link.*/
+a:hover, a:focus {
+    text-decoration: underline wavy;
+    color: rgb(239, 204, 9);
+}
+
+/*Add a different hover and focus state styling to the image inside a link. */
+#magicalcat img:hover, img:focus {
+    border: 20px double rgb(200, 100, 250);
+}
+
+button:hover{
+    background-color: aquamarine;
+}
+
+.nav-main-item {
+    display: flex;
+    background-color: rgb(242, 54, 16);
+}
+.nav-sub-item { /*This part refer to: https://www.w3schools.com/css/css_navbar.asp & https://www.w3schools.com/css/css_navbar_horizontal.asp*/
+    display: flex;
+    background-color:  rgb(242, 54, 16);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+button { /*Reference: https://www.w3schools.com/css/css3_buttons.asp*/
+    background-color: rgb(173, 31, 233);
+    margin-top: 0rem;
+    margin-bottom: 3rem;
+    margin-right: 3rem;
+    margin-left: 15rem;
+    padding: 0.5rem;
+}
