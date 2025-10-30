@@ -174,7 +174,7 @@ circles.attr("r", 10)
     .attr("cy", function (value) {
         return yScale(value.duration);/* Use scale to convert duration value to Y axis position */
     })
-    .attr("fill","green")
+    .attr("fill","black")
     .attr("opacity", "0.5"); /*Graphics enhancements (optional): set the opacity attribute on the plotted dots to a value less than 1*/
 
 /**** label the axes ****/
