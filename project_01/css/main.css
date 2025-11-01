@@ -54,10 +54,11 @@ img {
     height: auto;
     margin: 0rem 3rem;
     padding-left: 3rem;
-    padding-right: 1.5rem;
+    padding-right: 0rem;
     padding-top: 0.5rem;
     padding-bottom: 0.1rem;
 }
+
 
 figcaption {
     font-style: italic; 
@@ -88,6 +89,16 @@ a:hover, a:focus {
     border: 20px double rgb(200, 100, 250);
 }
 
+button { /*Reference: https://www.w3schools.com/css/css3_buttons.asp*/
+    background-color: rgb(241, 173, 25);
+    border-radius: 0.5rem;
+    margin-top: 0rem;
+    margin-bottom: 3rem;
+    margin-right: 3rem;
+    margin-left: 15rem;
+    padding: 0.5rem;
+}
+
 button:hover{
     background-color: aquamarine;
 }
@@ -104,11 +115,26 @@ button:hover{
     padding: 0;
 }
 
-button { /*Reference: https://www.w3schools.com/css/css3_buttons.asp*/
-    background-color: rgb(173, 31, 233);
-    margin-top: 0rem;
-    margin-bottom: 3rem;
-    margin-right: 3rem;
-    margin-left: 15rem;
-    padding: 0.5rem;
+
+/*Add a text blocks over image, reference:How TO - Text Blocks Over Image https://www.w3schools.com/howto/howto_css_image_text_blocks.asp*/
+.clickedImage {
+    position:relative;
+    display: inline-block;
+}
+
+.clickImage {
+    margin: 0rem;
+    padding: 0rem;
+}
+
+.tapToView {
+    position: absolute;
+    display: inline-block;
+    bottom: 1.5rem;
+    right: 3.5rem;
+    background-color: black;
+    color: white;
+    opacity: 0.5;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
 }
