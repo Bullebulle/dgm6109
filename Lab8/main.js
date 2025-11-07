@@ -32,7 +32,7 @@ svg.append("rect")
     //.attr("width", svgWidth - margin * 2)
    // .attr("height", svgHeight - margin * 2);
 
-let dataset = [ /*X axis:phoneTime ("A: As my phone use during toilet time increases") ，Y axis: duration (".my time spent on the toilet increases"*/
+let dataset = [
    /* 5 Oct*/
     {phoneTime: 12, duration: 13, emotionScore: 3, phoneDistractionLevel: 4},/*The fourth property:Degree of phone distraction during each toilet visit(1-10)*/
     {phoneTime: 0, duration: 2, emotionScore: 5, phoneDistractionLevel: 0},
@@ -155,17 +155,17 @@ let dataset = [ /*X axis:phoneTime ("A: As my phone use during toilet time incre
 ];
 /*sort function*/
 dataset.sort(function(a, b) {
-    if (a.emotionScore >= b.emotionScore){
+    if (a.duration >= b.duration){
         return -1;
     }
-    return 1; /*Sort the emotion score values ​​in descending order, so that the cold could draw big circles first, then small circles */
+    return 1; /*Sort the duration values ​​in descending order, so that the cold could draw big circles first, then small circles */
 });
 
 let xScale = d3.scaleLinear()
     .domain([0, 30])
     .range([margin, svgWidth - margin]);
 
-let yScale = d3.scalePow().exponent(1.3)/*Make the circles distribute more evenly*/
+let yScale = d3.scalePow().exponent(2)/*Make the circles distribute more evenly*/
     .domain([0, 10])
     .range([svgHeight - margin, margin]);
 
@@ -174,25 +174,25 @@ let circles = svg.selectAll("circle")
     .join("circle");
 
 /*Get the dynamic maximum and minimum values*/
-let emotionScoreMax = d3.max(dataset, function(value){
-    return value.emotionScore
+let durationMax = d3.max(dataset, function(value){
+    return value.duration
 });
-let emotionScoreMin = d3.min(dataset, function(value){
-    return value.emotionScore
+let durationMin = d3.min(dataset, function(value){
+    return value.duration
 })
 
 let rScale = d3.scaleSqrt() /*Changed to Sqrt to reduce visual illusion*/
-    .domain([emotionScoreMin, emotionScoreMax])
+    .domain([durationMin, durationMax])
     .range([5, 20]);
 
 circles.attr("r", function (value) {
-    return rScale(value.emotionScore);/*Set circle radius based on emotion score*/
+    return rScale(value.duration);/*Set circle radius based on duration*/
 })
     .attr("cx", function (value) { 
         return xScale(value.phoneTime);/* Use scale to convert phoneTime value to X axis position */
     })
     .attr("cy", function (value) {
-        return yScale(value.phoneDistractionLevel);/*Change the content of the Y-axis*/
+        return yScale(value.emotionScore);/*Change the content of the Y-axis*/
     })
     .attr("fill", function(value){ /*Divide the phoneDistractionLevel values into three levels: low distraction (1–3) colored blue; medium distraction (4–7) colored orange; high distraction (8–10) colored pink*/
         if (value.phoneDistractionLevel <= 3) {
@@ -210,7 +210,7 @@ circles.attr("r", function (value) {
     .attr("opacity", "0.5");
 /*color legend*/ 
 svg.append("text") /*legend title*/
-    .attr("x", svgWidth - 220)
+    .attr("x", svgWidth - 150)
     .attr("y", svgHeight - margin - 95)
     .attr("text-anchor", "start")
     .attr("font-weight", "bold")
@@ -222,7 +222,7 @@ let legendLabels = ["Low Distraction (1-3)", "Medium Distraction (4-7)", "High D
 for (let i = 0; i < 3; i++) { /*a "for" loop of legend circle and text*/ 
     svg.append("circle")
         .attr("r", 8)
-        .attr("cx", svgWidth - 220) 
+        .attr("cx", svgWidth -170) 
         .attr("cy", svgHeight - margin - 80 + i * 25)
         .attr("fill", distractionColors[i]);
     
@@ -231,13 +231,13 @@ for (let i = 0; i < 3; i++) { /*a "for" loop of legend circle and text*/
         .attr("text-anchor", "start")
         .attr("alignment-baseline", "middle")
         .style("font-size", "10px")
-        .attr("x", svgWidth - 205)
+        .attr("x", svgWidth - 150)
         .attr("y", svgHeight - margin - 80 + i * 25);
 } 
 
 /*Draw the border of legend*/
 svg.append("rect")
-    .attr("x", svgWidth - 240)
+    .attr("x", svgWidth - 180)
     .attr("y", svgHeight - margin - 110)
     .attr("width", 170)
     .attr("height", 90)
@@ -248,21 +248,21 @@ svg.append("rect")
 
 
     /*This for loop creates three reference circles for the legend. 
-    Each circle represents a different emotion score: smallest(1), approximately average size(5), and largest(10)*/ 
+    Each circle represents a different duration: smallest(5mins), approximately average size(15), and largest(30)*/ 
 for (let i= 1; i<=3; i++) {
-    let currentEmotion; /*Declare a variable for the current loop’s emotion score*/
+    let currentDuration; /*Declare a variable for the current loop’s duration*/
     if (i === 1) { 
-        currentEmotion = 2;
+        currentDuration = 5;
     } else if (i=== 2) { 
-        currentEmotion = 5;
+        currentDuration = 15;
     } else if ( i=== 3){
-        currentEmotion = 9;
+        currentDuration = 30;
     }
     /*draw circles*/
     svg.append("circle")
-        .attr("r", rScale(currentEmotion)) /*Set the circle radius based on the scaled emotion score*/ 
+        .attr("r", rScale(currentDuration)) /*Set the circle radius based on the scaled durationon */
         .attr("cx", margin +41)
-        .attr("cy", i*35 - 9)
+        .attr("cy", i*38 - 9)
         .attr("fill", "black")
         .attr("opacity", "0.5");
     /* labels with units*/
@@ -271,22 +271,22 @@ for (let i= 1; i<=3; i++) {
         .attr("y", i*35 - 9)
         .attr("alignment-baseline", "middle")
         .style("font-size", "10px")
-        .text("Emotion Score:" + currentEmotion + "Points");
+        .text("Duration:" + currentDuration + "min");
     }
 
 /*Planning ahead for Title of the label*/
-let LegendTitle = svg. append("text")
+let LegendTitle = svg.append("text")
     .attr("x", margin +25)
     .attr("y", 15)
     .style("font-size", "13px")
     .attr("font-weight", "bold")
-    .text("Emotion Score Legend")
+    .text("Duration Legend")
 /*Draw the border of legend*/
     svg.append("rect")
     .attr("x", margin + 16)
     .attr("y", 2)
     .attr("width", 160)
-    .attr("height", 115)
+    .attr("height", 125)
     .style("fill", "none")  
     .style("stroke", "gray")  
     .style("stroke-width", "1px")  
@@ -324,7 +324,7 @@ let yAxisLabel = svg.append("text")
     .attr("y", margin / 2 -14)
     .attr("text-anchor", "middle")
     .attr("alignment-baseline", "middle")
-    .text("Phone Distraction Level") 
+    .text("Emotion Score ") 
     .attr("transform", "rotate(-90)");
 
 /* origin point value label */
