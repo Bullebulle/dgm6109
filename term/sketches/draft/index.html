@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title> 
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="grid.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<header>
+			<h1><strong>Three Visualization Proposals: Exploring the Relationship Between Phone Use and Toilet Behavior</strong></h1>
+			<h3>Jiaojianjie Yu</h3>
+			<nav>
+				<a class="nav-main-item" href="#introduction">Introductions</a>
+				<a class="nav-sub-item" href="#sketch1">Sketch 1</a>
+				<a class="nav-sub-item" href="#sketch2">Sketch 2</a>
+				<a class="nav-sub-item" href="#sketch3">Sketch 3</a>
+			</nav>
+		</header>
+
+		<section id="introduction">
+			<h2>Introduction</h2>
+			<p>The main focus of my research is to explore the factors that influence toilet duration. I began collecting data on October 5th and continued until November 3rd, for a total of 18 days and 126 records. The dataset includes both <strong>objective</strong> and <strong>subjective</strong> datas.</p>
+		<section id="datascreenshot">
+			<p><a href="https://docs.google.com/spreadsheets/d/1NC6uv-8gBV34gAA_YJgmYZyT3X-82K41JacJvOozy10/edit?gid=0#gid=0">Click here to view raw data.</a></p>
+			<p> <strong>Objective Data:</strong> Date, toilet duration (minutes), time spent on my phone during each toilet visit(minutes), daily number of toilet visits, daily amount of water/beverage intake (ml), daily amount of dietary fiber intake (g), phone distraction level(1-10 point), and phone content category (game, news, social media).</p>
+			<p> <strong>Subjective Data:</strong> Degree of phone distraction during each toilet visit (1-10), and emotion score before each toilet visit (1-10).</p>
+			<p>After creating and analyzing multiple scatterplots during previous exercises, I decided to focus on the relationships among five key variables: 
+			toilet duration, phone content category, phone distraction level, emotion score, and time spent on the phone during each toilet visit. 
+			Through several rounds of hypothesis testing, I refined my research focus and selected three hypotheses to visualize and evaluate in this project:<p>
+			To test and visualize these hypotheses, I developed three different types of visualizations:</p>
+			<p>a <strong>scatterplot </strong> for Hypothesis 1,</p> 
+			<p>an <strong>area trend chart</strong> for Hypothesis 2, </p>
+			<p>a <strong>cluster bubble map</strong> for Hypothesis 3.</p> 
+			<p>Each visualization emphasizes a distinct relationship among my tracked variables and contributes to understanding how phone usage behavior affects toilet duration.
+			</p>
+		</section>
+		
+
+		<section id="sketch1">
+			<h2><strong>Sketch 1: Relationship Between Phone Use Time and Toilet Hour</strong></h2>
+			<h4>Hypothesis: As my phone use distraction level increases, my time spent on the toilet increases. In addition, phone content category might positively affect my time spent on the toilet.</h4>
+			<p> This visualization uses a <b>scatterplot (bubble plot)</b> to examine the relationship between <b>phone use duration</b> and <b>toilet duration</b>. Each bubble represents one toilet event. 
+				The <strong>X-axis</strong> shows time spent on my phone during each toilet visit (minutes), and the <strong>Y-axis</strong> shows total toilet duration (minutes). </p> 
+			<p> The <strong>size</strong> of each bubble encodes the degree of phone distraction (1-10), and the <strong>color</strong> represents phone content type(Game:Oringe; News: Blue; Social Media: Pink; None((do not use the phone)): Grey).</p>				
+			<p>From this figure, a clear upward trend can be observed: data points cluster along a diagonal rising from the lower left to the upper right, indicating that the longer the phone is used, the longer the toilet duration tends to be.
+			<p>Larger bubbles—representing higher levels of distraction—appear mainly in the upper-right area, further reinforcing this positive correlation.
+			Color patterns reveal that entertainment-related content (such as games and social media) is typically associated with longer toilet durations than informational content (news) or cases without phone use.
+			Together, these visual patterns confirm that both higher distraction levels and specific content types contribute to extended toilet duration.</p>
+			<p>Conclusion: The visualization supports Hypothesis 1</p>
+			<p><a href="sketch1.pdf">Click here to check Sketch1 PDF </a></p>
+			<p><strong>Main Reference</strong> </p>
+			<p>Course DGM6108, DGM6109 for Fall 2025.</p>
+		</section>
+
+
+		<section id="sketch2">
+			<h2><strong>Sketch 2: Toilet Duration vs Emotion Score by Content Type</strong></h2>
+			<h4>Hypothesis: As emotion score increases, toilet duration tends to increase. In addition, phone content type might affect this relationship.</h4>
+			<p>In this visualization, the X-axis represents emotion score(1-10point) and the Y-axis represents toilet duration (0-30minutes). The colored areas correspond to different phone content types(Game:Oringe; News: Blue; Social Media: Pink; None((do not use the phone)): Grey). 
+				As the emotion score increases, toilet duration tends to increase overall — particularly for entertainment-related content (games and social media), which occupy higher and broader areas at higher emotion levels. 
+				This supports the hypothesis that both emotional state and content type jointly influence toilet duration.</p>
+			<p>In the area chart, toilet duration gradually rises along the X-axis as emotion score increases.
+			<p>The stacked colored regions show that game and social-media areas dominate at higher emotion scores, while news or “no phone” areas remain lower. This demonstrates that positive or heightened emotional states correspond to longer toilet durations, especially when the user engages with entertainment content.</p>
+			<p>Conclusion: The smooth upward slopes and color segmentation together visualize the joint influence of emotional intensity and content type on toilet behavior, supporting the proposed hypothesis.</p>
+			<p><a href="sketch2.pdf">Click here to check Sketch2 PDF </a></p>
+			<p><strong>Main Reference</strong> </p>
+			<p><i>Area Graph, The Data Visuailsation Catalogue</i>, <a href="https://datavizcatalogue.com/methods/area_graph.html">https://datavizcatalogue.com/methods/area_graph.html;</a></p>
+			<p><i>The 52 Best — And Weirdest — Charts We Made In 2016, Five Thirty Eight,</i><a href="https://fivethirtyeight.com/features/the-52-best-and-weirdest-charts-we-made-in-2016/.html">https://fivethirtyeight.com/features/the-52-best-and-weirdest-charts-we-made-in-2016/.html</a></p>
+		</section>
+
+		<section id="sketch3">
+			<h2><strong>Sketch 3: Toilet Duration vs Emotion Score by Content Type</strong></h2>
+			<h4>Hypothesis: As phone distraction increases, toilet duration increases. In addition, entertainment content such as games or social media might reinforce this effect, especially under higher emotion scores.</h4>
+			<p>This visualization presents a <strong>cluster bubble map</strong> that organizes toilet session data across two categorical dimensions: <strong>emotion level(1-10point)</strong> (columns) and <strong>phone distraction level(1-10point)</strong> (rows). 
+			Each circle represents one toilet event. 
+			The <strong>size</strong> of each bubble corresponds to the <strong>toilet duration (minutes)</strong>, while the <strong>color</strong> indicates the <strong>phone content type(Game:Oringe; News: Blue; Social Media: Pink; None(do not use the phone): Grey)</strong> 
+			</p>
+			<p>By arranging data in a 3*3 grid, the map visually compares patterns across combinations of emotional and distraction states. Clusters in the lower-right region (high emotion + high distraction) tend to include larger and more numerous bubbles, 
+			suggesting that both higher distraction and emotional intensity are associated with longer toilet durations. Within these clusters, entertainment-related content (such as games and social media) appears more frequently, supporting the hypothesis that content type may strengthen the relationship.</p>
+			<p>In addition, positions within each cell are not numerically meaningful but rather indicate the <b>density and relative frequency</b> of events within that group.
+			This structure emphasizes categorical comparison and pattern recognition instead of continuous correlation.</p>
+			<p>Conclusion: The pattern reveals that toilet sessions become longer under conditions of high distraction and high emotional arousal, confirming the interactive effect described in the hypothesis.
+				This categorical clustering visually demonstrates how psychological and behavioral variables combine to influence toilet duration.</p>
+			<p><a href="sketch3.pdf">Click here to check Sketch3 PDF </a></p>
+			<p><strong>Main Reference</strong> </p>
+			<p><i>Fig 5- uploaded by Marco J Van De Wiel, Marco J Van De Wiel,</i> <a href="https://www.researchgate.net/figure/Clustered-Bubble-chart-of-Circular-Economy-and-Nexus-top-20-most-frequent-meaningful_fig4_352083307">https://www.researchgate.net/figure/Clustered-Bubble-chart-of-Circular-Economy-and-Nexus-top-20-most-frequent-meaningful_fig4_352083307</a> </p>
+			<p><i>Circle packing, ResearchGate,</i><a href="https://observablehq.com/@d3/pack/2">https://observablehq.com/@d3/pack/2</a></p>
+		</section>
+	</body>
+</html>
+<!-- Main Reference: Class recording: Introduction + HTML tutorial https://northeastern.instructure.com/courses/232555/pages/class-recording-introduction-+-html-tutorial?module_item_id=12735407 -->
+
+
+
+
+
+	
