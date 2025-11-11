@@ -6,9 +6,18 @@ body {
     padding: 0;
 }
 
-h1, h2, h3, h4, p, nav, label {
+h1, h3, h4, p, nav, label {
     margin: 0.5rem 3rem; /* Uniform margins: Top and bottom margins are 0.5 rem，Left and right margins are 3 rem*/
     padding: 0.5rem;     /* Uniform paddings: Top & bottom & Left & right paddings are 0.5rem */
+}
+
+.content-panel {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 h1 {
@@ -19,6 +28,10 @@ h1 {
 h2 {
     font-size: 2rem;
     color: rgb(41, 6, 217);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 
 h3 {
@@ -83,6 +96,20 @@ a:hover, a:focus {
     color: rgb(105, 106, 105);
 }
 
+button { /*Reference: https://www.w3schools.com/css/css3_buttons.asp*/
+    background-color: rgb(241, 173, 25);
+    border-radius: 0.5rem;
+    margin-top: 0rem;
+    margin-bottom: 0.5rem;
+    margin-right: 3rem;
+    margin-left: 15rem;
+    padding: 0.5rem;
+}
+
+button:hover{
+    background-color: aquamarine;
+}
+
 .nav-main-item {
     display: flex;
     background-color: rgb(0, 0, 0);
@@ -93,4 +120,9 @@ a:hover, a:focus {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+.fiveelementspragraph {
+    margin: 1rem 3rem; 
+    padding: 0.1rem;
 }
