@@ -192,12 +192,12 @@ let allCircles = svg.selectAll("circle.dataPoints")
 
 /*color legend*/ 
 svg.append("text") /*legend title*/
-    .attr("x", svgWidth - 115)
+    .attr("x", svgWidth - 137)
     .attr("y", svgHeight - margin - 102)
     .attr("text-anchor", "start")
     .attr("font-weight", "bold")
     .style("font-size", "13px")
-    .text("Content Type");
+    .text("Phone Content Type");
 
 /*a "for" loop of legend circle and text, Reference：d3_scaleRadii_starter*/
 let contentTypeColor = ["blue", "orange", "pink", "gray"];
@@ -224,7 +224,7 @@ for (let i = 0; i < 4; i++) {
 svg.append("rect")
     .attr("x", svgWidth - 140)
     .attr("y", svgHeight - margin - 120)
-    .attr("width", 130)
+    .attr("width", 133)
     .attr("height", 117)
     .style("fill", "none")  
     .style("stroke", "gray")  
