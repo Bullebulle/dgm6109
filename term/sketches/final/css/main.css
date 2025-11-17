@@ -1,0 +1,115 @@
+body {
+    font-family:Arial, Helvetica, sans-serif; /* Change the default font.*/
+    background-size: contain; 
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h3, h4, p, nav, label {
+    margin: 0.5rem 3rem; /* Uniform margins: Top and bottom margins are 0.5 rem，Left and right margins are 3 rem*/
+    padding: 0.5rem;     /* Uniform paddings: Top & bottom & Left & right paddings are 0.5rem */
+}
+
+.content-panel {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: rgb(0, 0, 0);
+}
+
+h2 {
+    font-size: 2rem;
+    color: rgb(41, 6, 217);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: rgb(0, 2, 5);
+} 
+
+h4 {
+    font-size: 1rem;;
+    color: rgb(0, 5, 9);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1800px;
+    gap: 0.5rem;
+}
+
+label {
+    color: rgb(0, 0, 0);
+}
+
+p {
+    color: rgb(0, 0, 0);
+    max-width: 1800px;
+    padding: 0.1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 0rem 3rem;
+    padding-left: 3rem;
+    padding-right: 0rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.1rem;
+}
+
+
+figcaption {
+    font-style: italic; 
+    max-width: 800px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    color: rgb(0, 0, 0);
+
+}
+
+a {
+    color:rgb(229, 44, 66);
+    transition-property: color;
+    transition-duration: 3s;
+
+}
+
+/*Add a different hover and focus state styling to the in-text link.*/
+a:hover, a:focus {
+    text-decoration: underline wavy;
+    color: rgb(248, 217, 20);
+}
+
+
+.nav-main-item {
+    display: flex;
+    background-color: rgb(0, 0, 0);
+}
+.nav-sub-item { /*This part refer to: https://www.w3schools.com/css/css_navbar.asp & https://www.w3schools.com/css/css_navbar_horizontal.asp*/
+    display: flex;
+    background-color:  rgb(0, 0, 0);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.fiveelementspragraph {
+    margin: 1rem 3rem; 
+    padding: 0.1rem;
+}
