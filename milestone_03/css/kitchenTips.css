@@ -1,0 +1,265 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif; 
+    margin: 0;
+    padding: 0;
+}
+
+/* dropdown menu container */
+.dropdown {
+    position: relative;
+    display: inline-block; /* reference: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display,https://www.w3schools.com/css/css_inline-block.asp*/
+}
+
+/* dropdown button */
+.dropbtn {
+    background-color: transparent;
+    color: inherit;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: inherit;
+    padding: 0;
+}
+
+/* dropdown content*/
+.dropdown-content {
+    display: none; /*Hidden content*/
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1; /*cover other elements*/
+}
+
+/* the href of dropdown menu */
+.dropdown-content a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;/*without underline*/
+    color: black;
+}
+
+/* show the dropdown menu when hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+a {
+    color: black;
+    transition-property: color;
+    transition-duration: 0.2s;
+}
+
+/*Font settings*/
+
+p {
+    margin: 0.5rem 0; /* Uniform margins: Top and bottom margins are 0.5 rem，Left and right margins are 3 rem*/
+    font-family:'Times New Roman', Times, serif; 
+    line-height: 1.5;
+    font-size: x-large;
+}
+
+h2 {
+    margin-top: auto;
+    margin-left: 3.25rem; /* Uniform margins: Top and bottom margins are 0.5 rem，Left and right margins are 3 rem*/
+    color: #637D2C;
+}
+
+nav {
+    padding: 1rem 3rem; /* 如果需要 Header 两边有空隙 */
+    font-size: x-large;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: rgb(0, 0, 0);
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #637D2C;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: rgb(0, 2, 4);
+} 
+
+/* 1. 大容器布局：Logo 在左，导航在右 */
+.webTitle {
+    display: flex;
+    color: black;
+    justify-content: space-between; /* 关键：两端对齐（Logo贴左，导航贴右）*/
+    align-items: baseline;       /* 关键：垂直居中（让导航栏文字和 Logo 的中心线对齐） */
+    padding: 10px 20px;        /* 加一点内边距，不要贴着浏览器边缘 */
+    width: 100%;               /* 确保占满屏幕宽度 */
+}
+
+/* 2. 导航栏内部布局：让链接排成一行 */
+.webTitle nav {
+    display: flex; 
+    color: black;            /*导航栏内部也用 flex  */
+    gap: 20px;                /* 关键：控制每个导航按钮之间的间距 */
+}
+
+.nav-sub-kitchen {
+    color: #637D2C;
+
+}
+.nav-sub-kitchen:hover {
+    color:aliceblue;
+    background-color: #637D2C;
+}
+
+a:hover, a:focus {
+    background-color: #637D2C;
+    color: white;
+}
+
+/* For navigation: logo on the left， navigation bar on the right*/
+.webTitle {
+    display: flex;
+    color: black;
+    justify-content: space-between; /*Align both sides (logo on the left, navigation on the right).）*/
+    align-items: baseline;      /* Vertical alignment*/
+    padding: 10px 20px;      
+    width: 100%;     /* Fill the screen widt */
+}
+
+/* navigation bar inner layout：all the elements in one line */
+.webTitle nav {
+    display: flex; 
+    color: black;          
+    gap: 20px;         /* the gap between different "button" */
+}
+
+
+.kitchenTips {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.5rem;
+    padding: 0;
+}
+
+.kitchenBasic, .kitchenKnife {
+    margin-left: 3.25rem;
+    margin-bottom: 3.25rem;
+}
+
+.explore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:black;
+    margin-bottom: 3.35rem;
+}
+
+.explore a:hover, .explore a:focus {
+    color: #637D2C;
+    background-color: white;
+}
+
+
+/* footer container */
+.foot {
+    background-color: #637D2C;
+    color: white; 
+    padding: 40px 20px;
+    display: flex;             
+    justify-content: center; /* content in the center */
+    align-items: center;   /* vertical align */
+    flex-wrap: wrap; /* Allow line breaks if the screen is too small. */
+    gap: 30px;                
+    margin-top: 50px;
+}
+
+/* contact information (icon + words) */
+.contact {
+    display: flex;             /* Arrange icons and text horizontally */
+    align-items: center;       /* Icons and text vertically centered */
+    gap: 10px;                 /* the gap between icon and words */
+}
+
+/* settings of icons for contact information (letter, tele, address) */
+.contact img {
+    width: 24px;               /* Limit the size of small icons, otherwise the original image may be very large. */
+    height: 24px;
+    object-fit: contain;       /* Maintain proportion */
+}
+
+/* words */
+.contact p {
+    margin: 0; 
+    font-size: 0.9rem; 
+    font-family: Arial, sans-serif;
+}
+
+/* icons of social medias */
+.foot a {
+    display: block;             /* Treat the image as a block and eliminate the gaps that the image inherently contains. Reference： https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display*/
+    transition: transform 0.2s;
+}
+
+/* size of images */
+.foot a img {
+    width: 30px;            
+    height: 30px;
+}
+
+/* hover effects */
+.foot a:hover {
+    transform: scale(1.2);     /* Zoom in */
+    opacity: 0.8;
+}
+
+/* For mobile （768px）*/
+@media (max-width: 768px) {
+    .webTitle {
+        flex-direction: column; /* The logo and navigation are arranged vertically. */
+        align-items: center; /* Centering the content */
+        text-align: center; /*Centering the text*/
+    }
+
+    .webTitle nav {
+        flex-direction: column; /* Navigation links become a vertical list */
+        gap: 15px;
+        margin-top: 15px;
+        padding: 0;
+        text-align: center;
+    }
+
+    .foot {
+        flex-direction: column; /* Transform into vertical arrangement */
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .contact {
+        justify-content: center; /* Centering text */
+    }
+}   
+
+/*For desktop (1024px)*/
+@media (min-width: 64rem) { /*1024px = 64rem reference: https://nekocalc.com/px-to-rem-converter*/
+    .webTitle {  
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+}
+
+/* 3. For large screens (1920px) */
+@media (min-width: 120rem) { /* 1920px = 120rem reference: https://nekocalc.com/px-to-rem-converter */
+    .webTitle {  
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+}

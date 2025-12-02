@@ -1,0 +1,376 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif; 
+    margin: 0;
+    padding: 0;
+}
+
+/* dropdown menu container */
+.dropdown {
+    position: relative;
+    display: inline-block;  /* reference: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display,https://www.w3schools.com/css/css_inline-block.asp*/
+}
+
+/* dropdown button */
+.dropbtn {
+    background-color: transparent;
+    color: inherit;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: inherit;
+    padding: 0;
+}
+
+/* dropdown content*/
+.dropdown-content {
+    display: none; /*Hidden content*/
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1; /*cover other elements*/
+}
+
+/* the href of dropdown menu */
+.dropdown-content a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none; /*without underline*/
+    color: black;
+}
+
+/* show the dropdown menu when hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*Font settings*/
+
+p {
+    margin: 0.5rem 0; /* Uniform margins: Top and bottom margins are 0.5 rem，Left and right margins are 0 rem*/
+    font-family:'Times New Roman', Times, serif; 
+    font-size: x-large;
+}
+
+h2 {
+    margin-top: auto;
+    margin-left: 3.25rem; 
+}
+
+nav {
+    padding: 1rem 3rem; /* 如果需要 Header 两边有空隙 */
+    font-size: x-large;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: rgb(0, 0, 0);
+    padding-top: 0;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #637D2C;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: rgb(0, 2, 4);
+} 
+
+/* For navigation: logo on the left， navigation bar on the right*/
+.webTitle {
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between; /*Align both sides (logo on the left, navigation on the right).）*/
+    align-items: baseline; /* Vertical alignment*/
+    padding: 10px 20px;  
+    width: 100%;  /* Fill the screen widt */
+}
+
+/* navigation bar inner layout：all the elements in one line */
+.webTitle nav {
+    display: flex;    
+    gap: 20px; /* the gap between different "button" */
+}
+
+.nav-main-item {
+    color:#637D2C
+}
+.nav-main-item:hover {
+    background-color: #637D2C;
+    color: white
+}
+
+.dropdown:hover {
+    background-color: #637D2C;
+    color: white
+}
+a {
+    color: black;
+    transition-property: color;
+    transition-duration: 0.2s;
+    text-decoration: none;
+}
+a:hover, a:focus {
+    background-color: #637D2C;
+    color: white;
+}
+
+
+/* Introduction */
+#introduction {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* two columns */
+    gap: 5rem; 
+    align-items: start; /* top align */
+    max-width: 95%;
+    margin: 2rem auto;
+    padding: 2rem 1rem;
+}
+
+/* settings of image */
+.introImgContainer img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.introButtons {
+    display: flex; /*Arrange the buttons in a row*/
+    gap: 4rem; /* /* the gap between two "button" */
+    margin-top: 2rem;
+}
+
+/*Button1*/
+.exploreGlobalRecipes { 
+    font-size: larger;
+    background-color: #BED7B3;
+    border: none;
+    border-radius: 0.5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-right: 1rem;
+    margin-left: 0rem;
+    padding: 1rem;
+}
+
+.exploreGlobalRecipes:hover {
+    background-color: #f37777;
+}
+/*Button2*/
+.buildMyCookbook { 
+    font-size: larger;
+    background-color: #FFD9D9;
+    border: none;
+    border-radius: 0.5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-right: 0rem;
+    margin-left: 3rem;
+    padding: 1rem;
+}
+
+.buildMyCookbook:hover {
+    background-color:#637D2C;
+    color:white;
+}
+
+.explain{
+    font-size: larger;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+}
+/*Settings of global recipes*/
+#cuisinecategory {
+    display: grid;            
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center; 
+    align-items:center;     
+    flex-wrap: wrap; 
+    gap: 5rem;   
+    padding: 0 2rem;  
+    margin-left: 3.25rem; 
+}
+
+#cuisinecategory a {
+    position: relative;   /* make this box as a Origin point(parent elment) which provide a reference point for child elements (absolutely positioned elements). */
+    display: inline-block;  /*Make sure the image is completely enclosed by the <a></a>, and to show side by side.,reference: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display,https://www.w3schools.com/css/css_inline-block.asp*/
+    width: 190px;           
+    height: 220px;    
+    text-decoration: none;   /* without underline */
+    overflow: hidden; /*Cut off the overflowing part of the image*/
+}
+
+.category img {
+    display: block;       /* Treat the image as a block and eliminate the gaps that the image inherently contains. Reference： https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display*/
+    width: 190px;   
+    height: 220px;
+    object-fit: cover;     /* To make the image completely cover and fill the entire container area while maintaining its original aspect ratio (without stretching or distortion). */
+}
+
+/* area name */
+.area {
+    position: absolute;    /* child element */
+    bottom: 0;    
+    left: 0;   
+    width: 100%;     
+    background-color: #BED7B3;
+    text-align: center;  
+    padding: 10px 0; 
+    transition: 0.3s; /* annimation */
+}
+
+.area h3 {
+    margin: 0;            /*Remove the gaps that come with h3*/
+    font-size: 1.2rem;
+    color: black;
+}
+
+#cuisinecategory a:hover .area {
+    background-color: #FFD9D9; /*when hover, change color*/
+}
+
+
+
+/* footer container */
+.foot {
+    background-color: #637D2C;
+    color: white; 
+    padding: 40px 20px;
+    display: flex;             
+    justify-content: center; /* content in the center */
+    align-items: center;   /* vertical align */
+    flex-wrap: wrap; /* Allow line breaks if the screen is too small. */
+    gap: 30px;                
+    margin-top: 50px;
+}
+
+/* contact information (icon + words) */
+.contact {
+    display: flex;             /* Arrange icons and text horizontally */
+    align-items: center;       /* Icons and text vertically centered */
+    gap: 10px;                 /* the gap between icon and words */
+}
+
+/* settings of icons for contact information (letter, tele, address) */
+.contact img {
+    width: 24px;               /* Limit the size of small icons, otherwise the original image may be very large. */
+    height: 24px;
+    object-fit: contain;       /* Maintain proportion */
+}
+
+/* words */
+.contact p {
+    margin: 0; 
+    font-size: 0.9rem; 
+    font-family: Arial, sans-serif;
+}
+
+/* icons of social medias */
+.foot a {
+    display: block;             /* Treat the image as a block and eliminate the gaps that the image inherently contains. Reference： https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display*/
+    transition: transform 0.2s;
+}
+
+/* size of images */
+.foot a img {
+    width: 30px;            
+    height: 30px;
+}
+
+/* hover effects */
+.foot a:hover {
+    transform: scale(1.2);     /* Zoom in */
+    opacity: 0.8;
+}
+
+/* For mobile （768px）*/
+@media (max-width: 768px) {
+    .webTitle {
+        flex-direction: column; /* The logo and navigation are arranged vertically. */
+        align-items: center; /* Centering the content */
+        text-align: center; /*Centering the text*/
+    }
+
+    .webTitle nav {
+        flex-direction: column; /* Navigation links become a vertical list */
+        gap: 15px;
+        margin-top: 15px;
+        padding: 0;
+        text-align: center;
+    }
+
+    .foot {
+        flex-direction: column; /* Transform into vertical arrangement */
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .contact {
+        justify-content: center; /* Centering text */
+    }
+
+    #introduction { /*The content of the corresponding modules is arranged in two columns.*/
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1rem;
+    }
+    #cuisinecategory {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    #introduction img, #cuisinecategory img {
+    width: 100%; /* Preventing image overflow */
+    height: auto;
+    } 
+    
+    .introButtons {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1rem;
+    }
+}
+/*For desktop (1024px)*/
+@media (min-width: 64rem) { /*1024px = 64rem reference: https://nekocalc.com/px-to-rem-converter*/
+    .webTitle {  
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+    #introduction {  
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: auto;
+        align-items: start;
+    }
+    
+    #cuisinecategory { 
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: auto;
+    }
+}
+
+/* 3. For large screens (1920px) */
+@media (min-width: 120rem) { /* 1920px = 120rem reference: https://nekocalc.com/px-to-rem-converter */
+    .webTitle {  
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    #introduction {
+        gap: 5rem; 
+    }
+
+    #cuisinecategory {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}

@@ -1,0 +1,333 @@
+/*In this project, the code logic, structure, and layout style 
+of the continent pages (Asian, European, African, Middle Eastern, South American) are kept consistent. 
+To centralize documentation, 
+all detailed CSS code comments and reference sources have been compiled in the african.css file. 
+For related comments in the other stylesheets (asian.css, european.css, middleEastern.css, southAmerican.css), 
+please refer to those provided in african.css.*/
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif; 
+    margin: 0;
+    padding: 0;
+}
+
+/* dropdown menu container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: inherit;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: inherit;
+    padding: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover {
+    background-color: #637D2C;
+    color: white
+}
+a {
+    color: black;
+    transition-property: color;
+    transition-duration: 0.2s;
+}
+a:hover, a:focus {
+    background-color: #637D2C;
+    color: white;
+}
+
+
+p {
+    margin: 0.5rem 0; 
+    font-family:'Times New Roman', Times, serif; 
+    line-height: 1.5;
+    font-size: x-large;
+}
+
+h2 {
+    margin-top: auto;
+    margin-left: 3.25rem; 
+}
+
+nav {
+    padding: 1rem 3rem; 
+    font-size: x-large;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: rgb(0, 0, 0);
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #637D2C;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: rgb(0, 2, 4);
+} 
+
+.dropdown {
+    color:#637D2C
+}
+.dropdown:hover {
+    background-color: #637D2C;
+    color: white
+}
+
+.webTitle {
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between; 
+    align-items: baseline;    
+    padding: 10px 20px;      
+    width: 100%;         
+}
+
+.webTitle nav {
+    display: flex;             
+    gap: 20px;              
+    padding: 1rem 3rem;
+}
+
+#europeanCuisineIntro {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 5rem; 
+    align-items: start; 
+    max-width: 100%;
+    margin: 2rem 3.25rem; 
+    padding: 2rem 1rem;
+    font-family:'Times New Roman', Times, serif; 
+}
+
+.imgAndLinks img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.europeanArea {
+    display: grid;            
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items:center;   
+    flex-wrap: wrap;       
+    gap: 5rem;            
+    padding: 0 2rem;  
+    margin-left: 3.25rem;       
+    margin-bottom: 7rem;
+}
+
+.area {
+    position: relative;     
+    display: inline-block;  
+    width: 190px;         
+    height: 220px;       
+    text-decoration: none; 
+    overflow: hidden; /*Cut off the overflowing part of the image*/
+}
+
+.europeanArea img {
+    display: block;      
+    width: 190px;        
+    height: 220px;
+    object-fit: cover;  
+}
+
+.areaName {
+    position: absolute;   
+    bottom: 0;           
+    left: 0;           
+    width: 100%;          
+    background-color: #BED7B3;
+    text-align: center;   
+    padding: 10px 0;    
+    transition: 0.3s; 
+}
+.areaName:hover {
+    background-color: #FFD9D9;
+}
+
+.areaName h3 {
+    margin: 0;    
+    font-size: 1.2rem;
+    color: black;
+}
+
+.imgAndLinks a:hover, .imgAndLinks a:focus {
+    color:#637D2C;
+}
+
+.europeanfood {
+    margin-bottom: 1rem;
+}
+
+
+.foot {
+    background-color: #637D2C; 
+    color: white;          
+    padding: 40px 20px;  
+    display: flex;             
+    justify-content: center;   
+    align-items: center;       
+    flex-wrap: wrap;          
+    gap: 30px;                
+    margin-top: 50px;         
+}
+
+.contact {
+    display: flex;            
+    align-items: center;      
+    gap: 10px;           
+}
+
+.contact img {
+    width: 24px;           
+    height: 24px;
+    object-fit: contain;   
+}
+
+.contact p {
+    margin: 0;               
+    font-size: 0.9rem;     
+    font-family: Arial, sans-serif; 
+}
+
+.foot a {
+    display: block;         
+    transition: transform 0.2s;
+}
+
+.foot a img {
+    width: 30px;          
+    height: 30px;
+    border-radius: 5px;  
+}
+
+.foot a:hover {
+    transform: scale(1.2);   
+    opacity: 0.8;
+}
+
+.foot a {
+    display: block;        
+    transition: transform 0.2s; 
+}
+
+.foot a img {
+    width: 30px;           
+    height: 30px;
+    border-radius: 5px; 
+}
+
+.foot a:hover {
+    transform: scale(1.2);  
+    opacity: 0.8;
+}
+
+/* For mobile*/
+@media (max-width: 768px) {
+    .webTitle {
+        flex-direction: column;
+        align-items: center; 
+        text-align: center;
+    }
+
+    .webTitle nav {
+        flex-direction: column; 
+        gap: 15px;
+        margin-top: 15px;
+        padding: 0;
+        text-align: center;
+    }
+
+     .foot {
+        flex-direction: column; 
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .contact {
+        justify-content: center;
+    }
+
+    #europeanCuisineIntro {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1rem;
+}
+
+    .europeanArea {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 1rem;
+    }
+    #europeanCuisineIntro img, .europeanArea img {
+        width: 100%;
+        height: auto;
+    }
+}
+/*For desktop (1024px)*/
+@media (min-width: 64rem) { 
+    .webTitle {  
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    #europeanCuisineIntro {  
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        align-items: start;
+    }
+    
+    .europeanArea { 
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+        grid-template-rows: auto;
+    }
+}
+
+/* 3. For large screens (1920px) */
+@media (min-width: 120rem) { 
+    #europeanCuisineIntro {
+        gap: 5rem; 
+    }
+
+    .europeanArea {
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
+        gap: 2.5rem;
+    }
+}
