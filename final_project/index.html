@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Home Chef Atlas</title> 
+		<link rel="stylesheet" href="css/home.css">
+	</head>
+	<body>
+		<header>
+			<div class="webTitle">
+				<img src="img/title2.png" alt="title2" width="496" height="85"><!--logo image-->
+				<nav>
+					<a class="nav-main-item" href="index.html">Home</a><!--navigation button -->
+					<div class="dropdown"> <!--This div is to create a dorpdown menu, reference: 1.How TO - Hoverable Dropdown, https://www.w3schools.com/howto/howto_css_dropdown.asp; 2. How TO - Dropdown Navbar, https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp-->
+						<button class="dropbtn">Global Recipes &#9662;</button> <!--&#9662 is the code of triangle,reference:https://www.codetable.net/decimal/9662-->
+						<div class="dropdown-content">
+                            <a class="nav-sub-item" href="allGlobalRecipes.html">All</a>
+							<a class="nav-sub-item" href="asian.html">Asian</a>
+							<a class="nav-sub-item" href="african.html">African</a>
+							<a class="nav-sub-item" href="european.html">European</a>
+							<a class="nav-sub-item" href="middleEastern.html">Middle Eastern</a>
+							<a class="nav-sub-item" href="southAmerican.html">South American</a>
+						</div>
+					</div>
+					<a class="nav-sub-item" href="kitchenTips.html">Kitchen Tips</a>
+					<a class="nav-sub-item" href="myCookbook1.html">My Cookbook</a>
+					<a class="nav-sub-aboutUs" href="aboutUs.html">About Us</a>
+				</nav>
+			</div>
+		</header>
+<!--Introduction-->
+				<section id="introduction">
+					<div class = "introImgContainer">
+						<img src="img/foodmap.jpg" alt="foodmap" width="1024" height="466">
+					</div>
+
+					<div class="introContent">
+						<h1>Cook The Word!</h1>
+						<div class="explain">
+							<p>Who says you need a passport to explore global cuisine?</p>
+							<p>Here at Home Chef Atlas, every recipe is a tiny adventure — complete with cultural stories, essential tips, and flavors waiting to surprise you.</p>
+							<p>Ready to cook something new?</p>
+							<p>Dive into simple, beginner-friendly recipes inspired by dishes from across the world. Each dish comes with its own origin story — because good food is never just about ingredients.</p>
+						</div>
+						<!--two buttons-->
+						<div class="introButtons"></div>	
+							<a href="allGlobalRecipes.html" class="exploreGlobalRecipes">Explore Global Recipes</a>
+							<a href="signIn.html" class="buildMyCookbook">Build My Cookbook</a>
+						</div>
+				</section>
+
+<!--Area Display-->		
+		<section id="globalRecipes">
+			<h2><span style="color:#637D2C;">Global Recipes</span></h2>
+		</section>
+		<div class="category">
+			<section id="cuisinecategory">
+					<a href="asian.html"> <!--An image that links to another URL. Reference: HTML - Add a hyperlink to the image <img> tag https://blog.csdn.net/soyanzhong/article/details/78612180-->
+						<img src="img/mapotofu1.png" alt="mapotofu" width="190" height="220">
+						<div class="area"> <!--A text blocks over image. Reference:How TO - Text Blocks Over Imag https://www.w3schools.com/howto/howto_css_image_text_blocks.asp-->
+							<h3>Asian</h3>
+						</div>
+					</a>
+					<a href="african.html">
+						<img src="img/africanfood1.webp" alt="africanfood1" width="190" height="220">
+						<div class="area">
+							<h3>African</h3>
+						</div>
+					</a>
+					<a href="european.html"> 
+						<img src="img/europeanfood.jpg" alt="europeanfood" width="190" height="220">
+						<div class="area"> 
+							<h3>European</h3>
+						</div>
+					</a>
+					<a href="middleEast.html"> 
+						<img src="img/middleeastfood2.png" alt="middleEast" width="190" height="220">
+						<div class="area"> 
+							<h3>Middle East</h3>
+						</div>
+					</a>
+					<a href="southAmerican.html"> 
+						<img src="img/southamericanfood1.jpg" alt="southAmerican" width="190" height="220">
+						<div class="area"> <!--A text blocks over image. Reference:How TO - Text Blocks Over Imag https://www.w3schools.com/howto/howto_css_image_text_blocks.asp-->
+							<h3>South American</h3>
+						</div>
+					</a>
+			</section>
+		</div>
+
+<!--footer-->
+		<div class="foot">
+			<div class="contact">
+                <img src="img/letterF.png" alt="letter"><p>yu.jiao@northeastern.edu</p>
+            </div>
+            <div class="contact">
+                <img src="img/teleF.png" alt="tele"><p>672-380-8929</p>
+            </div>
+            <div class="contact">
+                <img src="img/add.png" alt="address"><p>410 W Georgia St #1400, Vancouver</p>
+            </div>
+			 <a href="https://www.instagram.com/">
+                <img src="img/ins.png" alt="socialMediaImg" width="60" height="60">
+            </a>
+            <a href="https://www.tiktok.com/en/">
+                <img src="img/titok.png" alt="tiktok" width="60" height="60">
+            </a>
+            <a href="https://x.com/">
+                <img src="img/twitter.webp" alt="youtube" width="60" height="60">
+            </a>
+		</div>
+	</body>
+</html>
+<!-- Main Reference: Class recording: Introduction + HTML tutorial https://northeastern.instructure.com/courses/232555/pages/class-recording-introduction-+-html-tutorial?module_item_id=12735407 -->
+
+
+
+
+
+	

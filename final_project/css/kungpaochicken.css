@@ -1,0 +1,408 @@
+/*In this project, the code logic, structure, and layout style 
+of the continent pages (Asian, European, African, Middle Eastern, South American) are kept consistent. 
+To centralize documentation, 
+all detailed CSS code comments and reference sources have been compiled in the african.css file. 
+For related comments in the other stylesheets (asian.css, european.css, middleEastern.css, southAmerican.css), 
+please refer to those provided in african.css.*/
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif; 
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: inherit;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: inherit;
+    padding: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover {
+    background-color: #637D2C;
+    color: white
+}
+
+p {
+    margin: 0.5rem 0;  
+    line-height: 1.5;
+    font-size: x-large;
+}
+
+h2 {
+    margin-top: auto;
+    margin-left: 3.25rem;
+}
+
+nav {
+    padding: 1rem 3rem; 
+    font-size: x-large;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: rgb(0, 0, 0);
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #637D2C;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: rgb(0, 2, 4);
+} 
+
+.dropdown {
+    color:#637D2C
+}
+.dropdown:hover {
+    background-color: #637D2C;
+    color: white
+}
+a {
+    color: black;
+    transition-property: color;
+    transition-duration: 0.2s;
+}
+a:hover, a:focus {
+    background-color: #637D2C;
+    color: white;
+}
+
+.webTitle {
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between; 
+    align-items: baseline; 
+    padding: 10px 20px;  
+    width: 100%; 
+}
+
+.webTitle nav {
+    display: flex;    
+    gap: 20px;        
+    padding: 1rem 3rem;
+}
+
+.addtoBook {
+    color: black;
+    transition-property: color;
+    transition-duration: 0.2s;
+    text-decoration: none;
+}
+a {
+    color: black;
+    transition-property: color;
+    transition-duration: 0.2s;
+}
+
+a:hover, a:focus {
+    background-color: #637D2C;
+    color: white;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-bottom: 0.5rem;
+    padding-bottom: 0;
+}
+/*Introduction layout*/
+.kpChickenIntro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem; 
+    align-items: start; /* top align */
+    max-width: 100%;
+    margin: 2rem 3.25rem; 
+    padding: 2rem 1rem;
+}
+/*icon*/
+.items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap:1.5rem; /* the gap between words and images */
+    align-items: start; /* top align */
+    max-width: 100%;
+    margin: 0; 
+    padding: 0;
+}
+
+.spice {
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+}
+
+.spice img{
+    width: 2rem;
+    height: 2rem;
+}
+
+.imgKPChicken img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/*button*/
+.addtoBook {
+    display: block;
+    width: fit-content; /*Width adapts to content*/
+    margin: 1rem auto; /*center*/
+    background-color: #FFD9D9;
+    font-size: larger;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2)
+}
+
+.addtoBook:hover, .addtoBook:focus {
+    background-color: #f37777;
+    color:white;
+}
+
+.stepTitle {
+    margin-left: 3.25rem;
+    color: #637D2C;
+}
+
+
+.cookSteps {
+    display: grid;            
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center; /* Distribute space evenly among projects */
+    align-items:center;    /* Vertical centering */
+    flex-wrap: wrap;       /* Allow line breaks if the screen is too small. */
+    gap: 5rem;              /* the gap bewteen each image */
+    padding: 0 2rem;  
+    margin: 3.25rem 3.25rem;
+}
+
+.step {
+    width: fit-content;
+    max-width: 190px;
+    font-size: large;
+}
+
+
+.roastpeanut {
+    margin-left: 3.25rem;
+}
+
+.tip {
+    margin: 3.25rem 3.25rem;
+    font-size: large;
+}
+
+.storyContent {
+    margin: 3.25rem 3.25rem;
+}
+
+.explore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:black;
+    margin-top: 3.25rem;
+    margin-bottom: 3.35rem;
+    font-size: x-large;
+}
+
+.explore a:hover, .explore a:focus { /*when hover,change color*/
+    color: #637D2C;
+    background-color: white;
+}
+
+/* footer container */
+.foot {
+    background-color: #637D2C;
+    color: white; 
+    padding: 40px 20px;
+    display: flex;             
+    justify-content: center; /* content in the center */
+    align-items: center;   /* vertical align */
+    flex-wrap: wrap; /* Allow line breaks if the screen is too small. */
+    gap: 30px;                
+    margin-top: 50px;
+}
+
+/* contact information (icon + words) */
+.contact {
+    display: flex;             /* Arrange icons and text horizontally */
+    align-items: center;       /* Icons and text vertically centered */
+    gap: 10px;                 /* the gap between icon and words */
+}
+
+/* settings of icons for contact information (letter, tele, address) */
+.contact img {
+    width: 24px;               /* Limit the size of small icons, otherwise the original image may be very large. */
+    height: 24px;
+    object-fit: contain;       /* Maintain proportion */
+}
+
+/* words */
+.contact p {
+    margin: 0; 
+    font-size: 0.9rem; 
+    font-family: Arial, sans-serif;
+}
+
+/* icons of social medias */
+.foot a {
+    display: block;             /* Treat the image as a block and eliminate the gaps that the image inherently contains. Reference： https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/display*/
+    transition: transform 0.2s;
+}
+
+/* size of images */
+.foot a img {
+    width: 30px;            
+    height: 30px;
+}
+
+/* hover effects */
+.foot a:hover {
+    transform: scale(1.2);     /* Zoom in */
+    opacity: 0.8;
+}
+
+/* For mobile （768px）*/
+@media (max-width: 768px) {
+    .webTitle {
+        flex-direction: column; /* The logo and navigation are arranged vertically. */
+        align-items: center; /* Centering the content */
+        text-align: center; /*Centering the text*/
+    }
+
+    .webTitle nav {
+        flex-direction: column; /* Navigation links become a vertical list */
+        gap: 15px;
+        margin-top: 15px;
+        padding: 0;
+        text-align: center;
+    }
+
+    .foot {
+        flex-direction: column; /* Transform into vertical arrangement */
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .contact {
+        justify-content: center; /* Centering text */
+    }
+
+    .kpChickenIntro { /*The content of the corresponding modules is arranged in two columns.*/
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1rem;
+    }
+    .cookSteps {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 1rem;
+        align-items: start;
+    }
+    .kpChickenIntro img, .cookSteps img {
+        width: 100%; /* Preventing image overflow */
+        height: auto;
+    }   
+
+    .items {
+        grid-template-columns: 1fr 1fr; 
+        gap: 1rem;
+    }
+    .spice img {
+        width: 2rem !important; /*To override any conflicting global styles (like width: 100%) */
+        height: 2rem !important;
+        flex-shrink: 0;   
+    }
+    .cookSteps img { 
+        width: 100%;     
+        height: 180px;   
+        object-fit: cover; 
+        border-radius: 8px; 
+}
+}
+/*For desktop (1024px)*/
+@media (min-width: 64rem) { /*1024px = 64rem reference: https://nekocalc.com/px-to-rem-converter*/
+    .webTitle {  
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+    .kpChickenIntro {  
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: auto;
+        align-items: start;
+    }
+    
+    .cookSteps { 
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+        grid-template-rows: auto;
+    }
+    .cookSteps img {
+        width: 100%;       
+        height: 200px;   
+        object-fit: cover; 
+        border-radius: 8px; 
+    }
+    .step {
+        width: 100%;        
+        max-width: none;  
+    }
+}
+
+/* 3. For large screens (1920px) */
+@media (min-width: 120rem) { /* 1920px = 120rem reference: https://nekocalc.com/px-to-rem-converter */
+    .webTitle {  
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .kpChickenIntro {
+        gap: 5rem; 
+    }
+
+    .cookSteps {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
