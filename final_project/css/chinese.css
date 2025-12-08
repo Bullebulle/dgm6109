@@ -294,7 +294,7 @@ a:hover, a:focus {
         grid-template-rows: auto;
     }
     .chineseRecipes {  
-        grid-template-columns: 1fr 1fr; 
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
         grid-template-rows: auto;
         align-items: start;
     }
